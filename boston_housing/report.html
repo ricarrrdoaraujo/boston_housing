@@ -12157,7 +12157,7 @@ Desvio padrão dos preços: $165,171.13
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Resposta:</strong></p>
-<p>Sim, capturou a variação com sucesso. Pois um coeficiente de determinação alto significa que é um bom modelo. No caso foi 0.923, ou seja, 92,4%.</p>
+<p>Sim, capturou a variação com sucesso. Pois um coeficiente de determinação alto significa que é um bom modelo. No caso foi 0.923, ou seja, 92,3%.</p>
 
 </div>
 </div>
@@ -12235,7 +12235,7 @@ Desvio padrão dos preços: $165,171.13
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Resposta: </strong>
-Separando o conjunto de dados em dados de treinamento e teste, cria um modelo que generaliza melhor para dados novos. Porque os dados de teste serão usados para termos certeza que o modelo escolhido é um bom modelo.</p>
+O benefício em separar os dados em subconjuntos é para testar o algoritmo em dados diferentes dos de treinamento, com isso avaliar o modelo e generaliza-lo para ter um bom desempenho em dados que não foram utilizados. Caso o algoritmo seja testado utilizando os dados de treinamento, ou seja, dados já utilizados, o problema de sobreajuste não poderia ser avaliado corretamente pois esses dados já foram decorados pelo modelo.</p>
 
 </div>
 </div>
@@ -13322,8 +13322,7 @@ lSkcAAAAAElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Resposta: </strong></p>
-<p><strong>Escolhido: max_depth = 10</strong></p>
-<p>Neste modelo ocorreu <strong>'overfitting'</strong>, pois os dados foram bem no conjunto de treinamento, mas no conjunto de teste ficaram com pontuação baixa, ocasionando <strong>'high variance'</strong>. Aumentar os pontos de treinamento faria com que as curvas de treinamento e teste se aproximassem mas não convergeriam no mesmo ponto.</p>
+<p><strong>Escolhido: max_depth = 10</strong> <br> Levando em consideração o comportamento da curva de teste, que tem desvio padrão relativamente alto, aumentar os pontos de treinamento poderia tanto aumentar quanto diminuir o score da curva de teste. O mesmo não ocorre com a curva de treinamento, que aparentemente não tem um desvio padrão considerável.</p>
 
 </div>
 </div>
@@ -14107,7 +14106,10 @@ Preço estimado para a casa do cliente 3: $931,636.36
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Resposta: </strong>Os valores estimados para os clientes são próximos aos valores que foram explorados como mínimo, médio e máximo para os imóveis de Boston. Intuitivamente se percebe que os dados se ajustam aos atributos.</p>
+<p><strong>Resposta: </strong>Os valores estimados para os clientes são próximos aos valores que foram explorados como mínimo, médio e máximo para os imóveis de Boston. <br>
+O <strong>cliente 2</strong> apresenta um valor baixo, próximo ao valor mínimo, visto que possui um imóvel com poucos cômodos, que é um atributo proporcional ao preço. E o nível de pobreza da vizinhança e a razão estudante:professor é alta, estes são atributos inversamente proporcionais.  <br>
+O <strong>cliente 3</strong> apresenta um valor próximo ao máximo, pois possui um imóvel com muitos cômodos, que é um atributo proporcional ao preço. O nível de pobreza da vizinhança e a razão estudante:professor é baixa, e como mencionado, são atributos inversamente proporcionais no nosso modelo.<br>
+O <strong>cliente 1</strong> apresenta um preço próximo a média, visto que os atributos RM, LSTAT e PTRATIO estão próximo a uma mediana entre os mesmo atributos do cliente 2 e 3.</p>
 
 </div>
 </div>
