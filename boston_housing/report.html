@@ -13320,9 +13320,19 @@ QBERERER0THSAYqIiIiIiI7xLwBJGT/6DJNeAAAAAElFTkSuQmCC
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Resposta: </strong></p>
 <p><strong>Escolhido: max_depth = 10</strong> <br> 
-A curva de treinamento inicia com um score alto e se mantém estável. A curva de teste inicia com um score baixo e cresce bastante até cerca de 50 pontos de treinamento, depois mantém uma estabilidade dentro do seu desvio padrão, que é relativamente alto. É um caso de sobreajuste, onde a curva de treinamento possui um score alto 
-mas a curva de teste um score abaixo do benchmark. <br>
-Adicionar mais pontos de treinamento poderia ajudar as curva de treinamento e de teste a se aproximarem e diminuirem o gap entre elas, resolvendo o problema de alta variação.</p>
+A curva de treinamento inicia com um score alto e se mantém estável. A curva de teste inicia
+com um score baixo e cresce bastante até cerca de 50 pontos de treinamento, depois mantém
+uma estabilidade dentro do seu desvio padrão, que é relativamente alto. É um caso de
+sobreajuste, onde a curva de treinamento possui um score alto mas a curva de teste um score
+abaixo do benchmark. <br>
+Aumentar os dados de treinamento ainda mais diminuiria o score da curva de treinamento pois
+aumentaria a complexidade do conjunto de dados. A curva de teste teria um leve aumento no
+score com o aumento dos dados. Sendo assim, o gap entre as curvas de treinamento e teste
+irá diminuir, ajudando a melhorar o problema de sobreajuste. <br>
+De modo geral aumentar os dados vai ser benéfico para o nosso modelo, mas apenas isso não
+é o suficiente para que se atinja a performance desejada. É recomendável também diminuir a
+complexidade do modelo para que generalize melhor e haja menos custo computacional ou se
+possível diminuir a quantidade de features.</p>
 
 </div>
 </div>
